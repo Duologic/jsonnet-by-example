@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/Duologic/jsonml-libsonnet.git",
+          "subdir": ""
+        }
+      },
+      "version": "ddda88d1deb637197e87f75bf1ef97bde902d185",
+      "sum": "EoXIKoTOLIEu4ENU+Mm3MiWVFt/JncHKRg7NQu0hUTw="
+    }
+  ],
+  "legacyImports": false
+}
