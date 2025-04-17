@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
-<style>/* http://meyerweb.com/eric/tools/css/reset/ 
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -48,39 +49,73 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 </style>
-<style>table {
+<style>
+div.content {
     margin: auto;
-    width: 50%;
+    margin-top: 11px;
+    width: 900px;
+}
+h1 {
+    font-size: 38px;
+    line-height: 60px;
+    margin-top: 11px;
+}
+p {
+    margin: 5px;
+    margin-left: 0;
+}
+table {
+    width: 100%;
+}
+tr.space {
+    height: 20px;
 }
 td {
-    padding: 5px;
-    padding-bottom: 0;
+    width: 50%;
+    padding-top: 5px;
     vertical-align: top;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
 }
 code {
     white-space: pre;
 }
 td.code {
-    background: lightgrey;
+    background: #f0f0f0;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 18px;
 }
+
 </style>
 </head>
 <body>
+<div class="content">
+<h1>
+Jsonnet by Example: Values
+</h1>
 <table>
-<tr>
+<tr class="description">
+<td>
+<p>
+Any value that can be represented with JSON is a valid value for Jsonnet.
+</p>
+</td>
+<td></td>
+</tr>
+<tr class="input">
 <td>
 </td>
 <td class="code">
 <code> [</code>
 </td>
 </tr>
-<tr>
+<tr class="input">
 <td>
 <p>
-string concatenation
+Strings, which can be added together with +.
 </p>
 </td>
 <td class="code">
@@ -88,32 +123,22 @@ string concatenation
  </code>
 </td>
 </tr>
-<tr>
+<tr class="input">
 <td>
 <p>
-sum
+Numbers, with support for arithmetics
 </p>
 </td>
 <td class="code">
 <code>     '1+1 = ' + (1 + 1),
+     '7.0/3.0 = ' + (7.0 / 3.0),
  </code>
 </td>
 </tr>
-<tr>
+<tr class="input">
 <td>
 <p>
-divide
-</p>
-</td>
-<td class="code">
-<code>     '7.0/3.0 = ' + (7.0 / 3.0),
- </code>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-booleans
+Booleans, with boolean operators as you’d expect.
 </p>
 </td>
 <td class="code">
@@ -123,10 +148,10 @@ booleans
  </code>
 </td>
 </tr>
-<tr>
+<tr class="input">
 <td>
 <p>
-objects
+Objects
 </p>
 </td>
 <td class="code">
@@ -135,10 +160,22 @@ objects
  </code>
 </td>
 </tr>
-<tr>
+<tr class="input">
 <td>
 <p>
-null
+Arrays, with mixed values
+</p>
+</td>
+<td class="code">
+<code>     [],
+     ['item1', 42],
+ </code>
+</td>
+</tr>
+<tr class="input">
+<td>
+<p>
+And null
 </p>
 </td>
 <td class="code">
@@ -147,6 +184,43 @@ null
  </code>
 </td>
 </tr>
+<tr class="space">
+<td></td>
+<td></td>
+</tr>
+<tr class="output">
+<td>
+<p>
+The default manifestation of <code>jsonnet</code> is JSON.
+</p>
+<p>
+This example is manifested as an array.
+</p>
+</td>
+<td class="code">
+<code> $ jsonnet values.jsonnet
+ [
+       "jsonnet",
+       "1+1 = 2",
+       "7.0/3.0 = 2.3333333333333335",
+       false,
+       true,
+       false,
+       { },
+       {
+             "key": "value"
+       },
+       [ ],
+       [
+             "item1",
+             42
+       ],
+       null
+ ]
+ </code>
+</td>
+</tr>
 </table>
+</div>
 </body>
 </html>

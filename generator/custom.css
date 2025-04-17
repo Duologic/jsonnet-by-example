@@ -1,17 +1,36 @@
-table {
+div.content {
     margin: auto;
-    width: 50%;
+    margin-top: 11px;
+    width: 900px;
+}
+h1 {
+    font-size: 38px;
+    line-height: 60px;
+    margin-top: 11px;
+}
+p {
+    margin: 5px;
+    margin-left: 0;
+}
+table {
+    width: 100%;
+}
+tr.space {
+    height: 20px;
 }
 td {
-    padding: 5px;
-    padding-bottom: 0;
+    width: 50%;
+    padding-top: 5px;
     vertical-align: top;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
 }
 code {
     white-space: pre;
 }
 td.code {
-    background: lightgrey;
+    background: #f0f0f0;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 18px;
 }
