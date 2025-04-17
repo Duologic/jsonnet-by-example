@@ -1,0 +1,257 @@
+<html lang="en">
+<head>
+<title>
+Jsonnet by Example: Values
+</title>
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+</style>
+<style>
+div.content {
+    margin: auto;
+    margin-top: 11px;
+    width: 900px;
+}
+h1 {
+    font-size: 38px;
+    line-height: 60px;
+    margin-top: 11px;
+}
+p {
+    margin: 5px;
+    margin-left: 0;
+}
+table {
+    width: 100%;
+    margin-bottom: 60px;
+}
+tr.space {
+    height: 20px;
+}
+td {
+    max-width: 450px;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
+}
+code {
+    white-space: pre;
+    width: 450px;
+}
+td.code {
+    background: #f0f0f0;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 18px;
+    width: 450px;
+    overflow-x: scroll;
+}
+
+</style>
+</head>
+<body>
+<div class="content">
+<h1>
+Jsonnet by Example: Values
+</h1>
+<table>
+<tr class="description">
+<td>
+<p>
+Any value that can be represented with JSON is a valid value for Jsonnet.
+</p>
+</td>
+<td></td>
+</tr>
+<tr class="input">
+<td>
+</td>
+<td class="code">
+<code> [</code>
+</td>
+</tr>
+<tr class="input">
+<td>
+<p>
+Strings, which can be added together with +.
+</p>
+</td>
+<td class="code">
+<code>     'json' + 'net',
+ </code>
+</td>
+</tr>
+<tr class="input">
+<td>
+<p>
+Numbers, with support for arithmetics
+</p>
+</td>
+<td class="code">
+<code>     '1+1 = ' + (1 + 1),
+     '7.0/3.0 = ' + (7.0 / 3.0),
+ </code>
+</td>
+</tr>
+<tr class="input">
+<td>
+<p>
+Booleans, with boolean operators as you’d expect.
+</p>
+</td>
+<td class="code">
+<code>     true && false,
+     true || false,
+     !true,
+ </code>
+</td>
+</tr>
+<tr class="input">
+<td>
+<p>
+Objects
+</p>
+</td>
+<td class="code">
+<code>     {},
+     { key: 'value' },
+ </code>
+</td>
+</tr>
+<tr class="input">
+<td>
+<p>
+Arrays, with mixed values
+</p>
+</td>
+<td class="code">
+<code>     [],
+     ['item1', 42],
+ </code>
+</td>
+</tr>
+<tr class="input">
+<td>
+<p>
+And null
+</p>
+</td>
+<td class="code">
+<code>     null,
+ ]</code>
+</td>
+</tr>
+<tr class="space">
+<td></td>
+<td></td>
+</tr>
+<tr class="output">
+<td>
+<p>
+The default manifestation of <code>jsonnet</code> is JSON.
+</p>
+<p>
+This example is manifested as an array.
+</p>
+</td>
+<td class="code">
+<code> $ jsonnet values.jsonnet
+ [
+         "jsonnet",
+         "1+1 = 2",
+         "7.0/3.0 = 2.3333333333333335",
+         false,
+         true,
+         false,
+         {
+ </code>
+</td>
+</tr>
+<tr class="output">
+<td>
+</td>
+<td class="code">
+<code>         },
+         {
+                 "key": "value"
+         },
+         [
+ </code>
+</td>
+</tr>
+<tr class="output">
+<td>
+</td>
+<td class="code">
+<code>         ],
+         [
+                 "item1",
+                 42
+         ],
+         null
+ ]</code>
+</td>
+</tr>
+<tr class="next">
+<td>
+<p>
+Next: 
+<a href="03-locals.html">
+Locals
+</a>
+</p>
+</td>
+<td></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

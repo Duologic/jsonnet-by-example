@@ -1,0 +1,261 @@
+<html lang="en">
+<head>
+<title>
+Jsonnet by Example: Array
+</title>
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+</style>
+<style>
+div.content {
+    margin: auto;
+    margin-top: 11px;
+    width: 900px;
+}
+h1 {
+    font-size: 38px;
+    line-height: 60px;
+    margin-top: 11px;
+}
+p {
+    margin: 5px;
+    margin-left: 0;
+}
+table {
+    width: 100%;
+    margin-bottom: 60px;
+}
+tr.space {
+    height: 20px;
+}
+td {
+    max-width: 450px;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
+}
+code {
+    white-space: pre;
+    width: 450px;
+}
+td.code {
+    background: #f0f0f0;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 18px;
+    width: 450px;
+    overflow-x: scroll;
+}
+
+</style>
+</head>
+<body>
+<div class="content">
+<h1>
+Jsonnet by Example: Array
+</h1>
+<table>
+<tr class="description">
+<td>
+</td>
+<td></td>
+</tr>
+<tr class="input">
+<td>
+</td>
+<td class="code">
+<code> [
+     {
+         local arr1 = std.makeArray(5, function(x) x),
+         emp: arr1,
+         get: self.set[4],
+         len: std.length(self.set),
+         set:
+             std.mapWithIndex(
+                 function(i, v)
+                     if i == 4
+                     then 100
+                     else v,
+                 arr1
+             ),
+         setOnCreate:
+             std.makeArray(
+                 5,
+                 function(x)
+                     if x == 4
+                     then 100
+                     else x
+             ),
+     },
+     {
+         local arr2 = [0, 1, 2, 3, 4],
+         dcl: arr2,
+     },
+     {
+         local arr3 = std.range(100, 500),
+         slice: arr3[100:103],
+         step: arr3[::100],
+         stepandslice: arr3[90:200:50],
+     },
+ </code>
+</td>
+</tr>
+<tr class="input">
+<td>
+</td>
+<td class="code">
+<code>     {
+         '2d':
+             [
+                 [
+                     i + j
+                     for j in std.range(0, 2)
+                 ]
+                 for i in std.range(0, 1)
+             ],
+     },
+ ]</code>
+</td>
+</tr>
+<tr class="space">
+<td></td>
+<td></td>
+</tr>
+<tr class="output">
+<td>
+</td>
+<td class="code">
+<code> [
+         {
+                 "emp": [
+                         0,
+                         1,
+                         2,
+                         3,
+                         4
+                 ],
+                 "get": 100,
+                 "len": 5,
+                 "set": [
+                         0,
+                         1,
+                         2,
+                         3,
+                         100
+                 ],
+                 "setOnCreate": [
+                         0,
+                         1,
+                         2,
+                         3,
+                         100
+                 ]
+         },
+         {
+                 "dcl": [
+                         0,
+                         1,
+                         2,
+                         3,
+                         4
+                 ]
+         },
+         {
+                 "slice": [
+                         200,
+                         201,
+                         202
+                 ],
+                 "step": [
+                         100,
+                         200,
+                         300,
+                         400,
+                         500
+                 ],
+                 "stepandslice": [
+                         190,
+                         240,
+                         290
+                 ]
+         },
+         {
+                 "2d": [
+                         [
+                                 0,
+                                 1,
+                                 2
+                         ],
+                         [
+                                 1,
+                                 2,
+                                 3
+                         ]
+                 ]
+         }
+ ]</code>
+</td>
+</tr>
+<tr class="next">
+<td>
+<p>
+Next: 
+<a href="09-objects.html">
+Objects
+</a>
+</p>
+</td>
+<td></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

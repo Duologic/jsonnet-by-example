@@ -1,0 +1,5 @@
+// To run the program, put the code in hello-world.jsonnet and use jsonnet.
+$ jsonnet hello-world.jsonnet
+"hello world"
+
+// Next we'll look at the values.

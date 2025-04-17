@@ -1,0 +1,30 @@
+{
+    "indices": [
+        "1 has index 0",
+        "2 has index 1",
+        "3 has index 2"
+    ],
+    "keys": [
+        "a",
+        "b"
+    ],
+    "keys_all": [
+        "a",
+        "b",
+        "c"
+    ],
+    "kvs": [
+        {
+            "key": "a",
+            "value": "apple"
+        },
+        {
+            "key": "b",
+            "value": "banana"
+        }
+    ],
+    "str": [
+        "g",
+        "o"
+    ]
+}

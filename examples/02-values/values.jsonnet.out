@@ -1,0 +1,25 @@
+// The default manifestation of <code>jsonnet</code> is JSON.
+// This example is manifested as an array.
+$ jsonnet values.jsonnet
+[
+    "jsonnet",
+    "1+1 = 2",
+    "7.0/3.0 = 2.3333333333333335",
+    false,
+    true,
+    false,
+    {
+
+    },
+    {
+        "key": "value"
+    },
+    [
+
+    ],
+    [
+        "item1",
+        42
+    ],
+    null
+]

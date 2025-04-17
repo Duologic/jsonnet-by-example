@@ -1,0 +1,11 @@
+{
+    "switch0": "Write 2 as two",
+    "switch1": "It's a weekday",
+    "switch2": "It's after noon",
+    "switch3": "It's before noon",
+    "switch4": [
+        "I'm a bool",
+        "Don't know type number",
+        "I'm a function"
+    ]
+}
